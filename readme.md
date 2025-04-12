@@ -1,70 +1,130 @@
+# AI Multi-Agent Systems
+
+This project demonstrates two different implementations of multi-agent systems using CrewAI:
+
+1. Content Creation Pipeline
+2. Customer Support System
+
+## Overview
+
+### 1. Content Creation Pipeline (`ResearchWriteArticle.ipynb`)
+
+A three-agent system that collaboratively creates blog articles:
+
+- **Content Planner**: Plans and researches content, creating detailed outlines
+- **Content Writer**: Writes the article based on the planner's outline
+- **Editor**: Proofreads and polishes the final content
+
+### 2. Customer Support System (`CustomerSupport.ipynb`)
+
+A two-agent system that handles customer inquiries:
+
+- **Senior Support Representative**: Handles customer inquiries and provides detailed responses
+- **Support Quality Assurance Specialist**: Reviews and ensures the quality of responses
+
+## Prerequisites
+
+- Python 3.x
+- OpenAI API key
+- Required packages:
+  ```bash
+  pip install crewai python-dotenv
+  ```
+
+## Setup
+
+1. Clone the repository
+2. Create a `.env` file in the project root with your OpenAI API credentials:
+   ```
+   OPENAI_API_KEY=your_api_key_here
+   OPENAI_MODEL_NAME=your_preferred_model  # Optional
+   ```
+
 ## Usage
 
-1. Import the required libraries:
+### Content Creation Pipeline
 
-```python
-from crewai import Agent, Task, Crew
-from dotenv import load_dotenv
-```
+1. Open `ResearchWriteArticle.ipynb`
+2. Run the cells to initialize the agents and crew
+3. Generate content by providing a topic:
+   ```python
+   result = crew.kickoff(inputs={"topic": "Your Topic Here"})
+   ```
 
-2. Run the content creation pipeline:
+### Customer Support System
 
-```python
-# Initialize the crew
-crew = Crew(agents=[planner, writer, editor], tasks=[plan, write, edit], verbose=2)
-
-# Generate content
-result = crew.kickoff(inputs={"topic": "Your Topic Here"})
-```
-
-## Agent Roles
-
-### Content Planner
-
-- Plans engaging and factually accurate content
-- Creates comprehensive outlines
-- Identifies target audience and SEO keywords
-- Provides research and resources
-
-### Content Writer
-
-- Writes insightful and factually accurate articles
-- Follows the planner's outline
-- Incorporates SEO keywords naturally
-- Maintains balanced viewpoints
-
-### Editor
-
-- Reviews and proofreads content
-- Ensures alignment with brand voice
-- Checks for balanced viewpoints
-- Maintains journalistic best practices
+1. Open `CustomerSupport.ipynb`
+2. Run the cells to initialize the support agents and crew
+3. Handle customer inquiries by providing customer details:
+   ```python
+   inputs = {
+       "customer": "CustomerName",
+       "person": "ContactPerson",
+       "inquiry": "Customer's question or issue"
+   }
+   result = crew.kickoff(inputs=inputs)
+   ```
 
 ## Features
 
+### Content Creation Pipeline
+
 - Sequential task execution
-- Detailed logging with verbose mode
-- Customizable agent roles and tasks
-- Markdown output format
 - SEO optimization
 - Source citation
+- Markdown output format
+- Detailed content planning
+- Quality assurance through editing
+
+### Customer Support System
+
+- Quality assurance review process
+- Documentation scraping capabilities
+- Memory-enabled responses
+- Professional and friendly tone
+- Comprehensive inquiry resolution
 
 ## Configuration
 
-You can adjust the verbosity level of the crew:
+Both systems support:
 
-- `verbose=1`: Basic logging
-- `verbose=2`: Detailed logging including agent thinking process
+- Verbosity levels (1 or 2) for detailed logging
+- Custom agent roles and tasks
+- Tool integration
+- Memory management
 
-## Output
+## Tools and Integration
 
-The pipeline generates a complete blog post in markdown format, including:
+### Available Tools
 
-- Title and headings
-- Well-structured content
-- SEO-optimized text
-- Conclusion with call-to-action
+- SerperDevTool: Google search integration
+- ScrapeWebsiteTool: Web content scraping
+- WebsiteSearchTool: Website-specific search
+- Custom tool support for both systems
+
+## Best Practices
+
+1. **Agent Configuration**
+
+   - Define clear roles and goals
+   - Set appropriate delegation permissions
+   - Enable verbose mode for debugging
+
+2. **Task Management**
+
+   - Create detailed task descriptions
+   - Set clear expected outputs
+   - Assign appropriate tools to tasks
+
+3. **Quality Assurance**
+   - Implement review processes
+   - Enable memory for context retention
+   - Use appropriate tools for verification
 
 ## Note
 
-This project uses OpenAI's API by default. Ensure you have sufficient API credits and a valid API key before running the pipeline.
+This project uses OpenAI's API by default. Ensure you have sufficient API credits and a valid API key before running either system.
+
+## License
+
+[Add your license information here]
