@@ -1,12 +1,13 @@
 # AI Multi-Agent Systems
 
-This project demonstrates five different implementations of multi-agent systems using CrewAI:
+This project demonstrates six different implementations of multi-agent systems using CrewAI:
 
 1. Content Creation Pipeline
 2. Customer Support System
 3. Event Planning System
 4. Customer Outreach System
 5. Financial Analysis System
+6. Job Application System
 
 ## Overview
 
@@ -50,6 +51,15 @@ A hierarchical system for financial trading analysis:
 - **Trading Strategy Agent**: Develops trading strategies based on analysis
 - **Execution Agent**: Plans the execution of trading strategies
 - **Risk Management Agent**: Assesses and manages trading risks
+
+### 6. Job Application System (`jobApplication.ipynb`)
+
+A specialized system for job application preparation:
+
+- **Profiler**: Compiles comprehensive personal and professional profiles
+- **Resume Writer**: Creates tailored resumes based on job requirements
+- **Cover Letter Writer**: Drafts personalized cover letters
+- **Application Reviewer**: Reviews and refines application materials
 
 ## Process Types
 
@@ -166,6 +176,28 @@ A hierarchical system for financial trading analysis:
    result = financial_trading_crew.kickoff()
    ```
 
+### Job Application System
+
+1. Open `jobApplication.ipynb`
+2. Run the cells to initialize the job application agents and crew
+3. Prepare job application materials by providing personal information:
+   ```python
+   profile_task = Task(
+       description=(
+           "Compile a detailed personal and professional profile "
+           "using the GitHub ({github_url}) URLs, and personal write-up "
+           "({personal_writeup}). Utilize tools to extract and "
+           "synthesize information from these sources."
+       ),
+       expected_output=(
+           "A comprehensive profile document that includes skills, "
+           "project experiences, contributions, interests, and "
+           "communication style."
+       ),
+       agent=profiler
+   )
+   ```
+
 ## Features
 
 ### Content Creation Pipeline
@@ -211,6 +243,15 @@ A hierarchical system for financial trading analysis:
 - Risk assessment and management
 - Hierarchical coordination
 - Specialized financial tools
+
+### Job Application System
+
+- Profile compilation from multiple sources
+- Resume customization for specific jobs
+- Cover letter personalization
+- Application material review and refinement
+- GitHub integration for project showcase
+- Professional tone and formatting
 
 ## Configuration
 
