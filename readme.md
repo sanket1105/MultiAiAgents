@@ -1,9 +1,11 @@
 # AI Multi-Agent Systems
 
-This project demonstrates two different implementations of multi-agent systems using CrewAI:
+This project demonstrates four different implementations of multi-agent systems using CrewAI:
 
 1. Content Creation Pipeline
 2. Customer Support System
+3. Event Planning System
+4. Customer Outreach System
 
 ## Overview
 
@@ -21,6 +23,23 @@ A two-agent system that handles customer inquiries:
 
 - **Senior Support Representative**: Handles customer inquiries and provides detailed responses
 - **Support Quality Assurance Specialist**: Reviews and ensures the quality of responses
+
+### 3. Event Planning System (`EventPlanning.ipynb`)
+
+A multi-agent system for comprehensive event planning:
+
+- **Event Planner**: Coordinates and plans event details
+- **Venue Manager**: Handles venue selection and management
+- **Marketing Specialist**: Creates marketing strategies and materials
+- **Budget Analyst**: Manages financial aspects and budgeting
+
+### 4. Customer Outreach System (`CustomerOutreach.ipynb`)
+
+A specialized system for customer engagement and outreach:
+
+- **Outreach Coordinator**: Manages customer communication strategies
+- **Content Creator**: Develops engaging outreach materials
+- **Response Handler**: Processes and manages customer responses
 
 ## Prerequisites
 
@@ -65,6 +84,36 @@ A two-agent system that handles customer inquiries:
    result = crew.kickoff(inputs=inputs)
    ```
 
+### Event Planning System
+
+1. Open `EventPlanning.ipynb`
+2. Run the cells to initialize the event planning agents and crew
+3. Plan events by providing event details:
+   ```python
+   inputs = {
+       "event_type": "Type of Event",
+       "date": "Event Date",
+       "budget": "Budget Range",
+       "attendees": "Expected Number of Attendees"
+   }
+   result = crew.kickoff(inputs=inputs)
+   ```
+
+### Customer Outreach System
+
+1. Open `CustomerOutreach.ipynb`
+2. Run the cells to initialize the outreach agents and crew
+3. Manage customer outreach by providing campaign details:
+   ```python
+   inputs = {
+       "campaign_type": "Type of Campaign",
+       "target_audience": "Target Audience",
+       "message": "Key Message",
+       "timeline": "Campaign Timeline"
+   }
+   result = crew.kickoff(inputs=inputs)
+   ```
+
 ## Features
 
 ### Content Creation Pipeline
@@ -84,9 +133,27 @@ A two-agent system that handles customer inquiries:
 - Professional and friendly tone
 - Comprehensive inquiry resolution
 
+### Event Planning System
+
+- Venue selection and management
+- Budget optimization
+- Marketing strategy development
+- Timeline management
+- Resource allocation
+- Vendor coordination
+
+### Customer Outreach System
+
+- Campaign strategy development
+- Content creation and optimization
+- Response management
+- Analytics and reporting
+- Multi-channel outreach
+- Engagement tracking
+
 ## Configuration
 
-Both systems support:
+All systems support:
 
 - Verbosity levels (1 or 2) for detailed logging
 - Custom agent roles and tasks
@@ -100,7 +167,7 @@ Both systems support:
 - SerperDevTool: Google search integration
 - ScrapeWebsiteTool: Web content scraping
 - WebsiteSearchTool: Website-specific search
-- Custom tool support for both systems
+- Custom tool support for all systems
 
 ## Best Practices
 
@@ -123,7 +190,7 @@ Both systems support:
 
 ## Note
 
-This project uses OpenAI's API by default. Ensure you have sufficient API credits and a valid API key before running either system.
+This project uses OpenAI's API by default. Ensure you have sufficient API credits and a valid API key before running any of the systems.
 
 ## License
 
