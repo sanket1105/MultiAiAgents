@@ -1,6 +1,6 @@
 # AI Multi-Agent Systems
 
-This project demonstrates six different implementations of multi-agent systems using CrewAI:
+This project demonstrates seven different implementations of multi-agent systems using CrewAI:
 
 1. Content Creation Pipeline
 2. Customer Support System
@@ -8,6 +8,7 @@ This project demonstrates six different implementations of multi-agent systems u
 4. Customer Outreach System
 5. Financial Analysis System
 6. Job Application System
+7. Automated Planning System
 
 ## Overview
 
@@ -61,6 +62,16 @@ A specialized system for job application preparation:
 - **Cover Letter Writer**: Drafts personalized cover letters
 - **Application Reviewer**: Reviews and refines application materials
 
+### 7. Automated Planning System (`automatedPlanning.ipynb`)
+
+A sophisticated system for automated task and project planning:
+
+- **Planning Coordinator**: Oversees and coordinates the planning process
+- **Resource Allocator**: Manages and optimizes resource distribution
+- **Schedule Optimizer**: Creates and optimizes project timelines
+- **Constraint Manager**: Handles dependencies and constraints
+- **Progress Monitor**: Tracks and reports on plan execution
+
 ## Process Types
 
 ### Sequential Process
@@ -76,6 +87,22 @@ A specialized system for job application preparation:
 - Allows for complex workflows with dependencies
 - Enables feedback loops and revisions
 - Ideal for specialized tasks requiring coordination
+
+### Automated Planning System
+
+1. Open `automatedPlanning.ipynb`
+2. Run the cells to initialize the planning agents and crew
+3. Create automated plans by providing project details:
+   ```python
+   inputs = {
+       "project_scope": "Project Scope",
+       "resources": "Available Resources",
+       "timeline": "Project Timeline",
+       "constraints": "Project Constraints",
+       "objectives": "Project Objectives"
+   }
+   result = crew.kickoff(inputs=inputs)
+   ```
 
 ## Prerequisites
 
@@ -198,6 +225,17 @@ A specialized system for job application preparation:
    )
    ```
 
+### Automated Planning System
+
+- Dynamic resource allocation
+- Intelligent schedule optimization
+- Constraint-based planning
+- Real-time progress monitoring
+- Risk assessment and mitigation
+- Automated dependency resolution
+- Multi-objective optimization
+- Adaptive planning capabilities
+
 ## Features
 
 ### Content Creation Pipeline
@@ -252,6 +290,17 @@ A specialized system for job application preparation:
 - Application material review and refinement
 - GitHub integration for project showcase
 - Professional tone and formatting
+
+### Automated Planning System
+
+- Dynamic resource allocation
+- Intelligent schedule optimization
+- Constraint-based planning
+- Real-time progress monitoring
+- Risk assessment and mitigation
+- Automated dependency resolution
+- Multi-objective optimization
+- Adaptive planning capabilities
 
 ## Configuration
 
