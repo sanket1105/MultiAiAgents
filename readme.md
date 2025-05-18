@@ -1,6 +1,6 @@
 # AI Multi-Agent Systems
 
-This project demonstrates seven different implementations of multi-agent systems using CrewAI:
+This project demonstrates eight different implementations of multi-agent systems using CrewAI:
 
 1. Content Creation Pipeline
 2. Customer Support System
@@ -9,6 +9,7 @@ This project demonstrates seven different implementations of multi-agent systems
 5. Financial Analysis System
 6. Job Application System
 7. Automated Planning System
+8. Agentic Sales Pipeline
 
 ## Overview
 
@@ -71,6 +72,15 @@ A sophisticated system for automated task and project planning:
 - **Schedule Optimizer**: Creates and optimizes project timelines
 - **Constraint Manager**: Handles dependencies and constraints
 - **Progress Monitor**: Tracks and reports on plan execution
+
+### 8. Agentic Sales Pipeline (`AgenticSalesPipeline.ipynb`)
+
+A specialized system for automated sales pipeline management:
+
+- **Sales Lead Generator**: Identifies and qualifies potential leads
+- **Sales Strategist**: Develops personalized sales strategies
+- **Proposal Creator**: Generates tailored sales proposals
+- **Follow-up Coordinator**: Manages customer follow-ups and engagement
 
 ## Process Types
 
@@ -236,6 +246,21 @@ A sophisticated system for automated task and project planning:
 - Multi-objective optimization
 - Adaptive planning capabilities
 
+### Agentic Sales Pipeline
+
+1. Open `AgenticSalesPipeline.ipynb`
+2. Run the cells to initialize the sales pipeline agents and crew
+3. Manage sales pipeline by providing lead details:
+   ```python
+   inputs = {
+       "target_market": "Target Market Segment",
+       "product_details": "Product/Service Information",
+       "sales_goals": "Sales Objectives",
+       "timeline": "Sales Timeline"
+   }
+   result = crew.kickoff(inputs=inputs)
+   ```
+
 ## Features
 
 ### Content Creation Pipeline
@@ -301,6 +326,17 @@ A sophisticated system for automated task and project planning:
 - Automated dependency resolution
 - Multi-objective optimization
 - Adaptive planning capabilities
+
+### Agentic Sales Pipeline
+
+- Lead generation and qualification
+- Personalized sales strategy development
+- Automated proposal creation
+- Follow-up management
+- Sales pipeline optimization
+- Customer engagement tracking
+- Performance analytics
+- Multi-channel sales coordination
 
 ## Configuration
 
