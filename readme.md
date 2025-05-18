@@ -12,6 +12,7 @@ This project demonstrates various implementations of multi-agent systems using C
 8. Agentic Sales Pipeline
 9. Performance Optimization System
 10. Progress Reporting System
+11. Content at Scale System
 
 ## Overview
 
@@ -100,6 +101,15 @@ A system for tracking and reporting project progress:
 - **Report Generator**: Creates comprehensive progress reports
 - **Analytics Specialist**: Analyzes progress data and trends
 
+### 11. Content at Scale System (`ContentAtScale.ipynb`)
+
+A system for generating and managing large-scale content production:
+
+- **Content Strategist**: Plans and coordinates content production
+- **Content Generator**: Creates high-quality content at scale
+- **Quality Controller**: Ensures content meets standards
+- **Distribution Manager**: Manages content distribution
+
 ## Project Structure
 
 ```
@@ -125,7 +135,7 @@ A system for tracking and reporting project progress:
 ## Setup
 
 1. Clone the repository
-2. Create a `.env` file in the project root with your OpenAI API credentials:
+2. Create a `.env` file in the project root with your API credentials:
    ```
    OPENAI_API_KEY=your_api_key_here
    OPENAI_MODEL_NAME=your_preferred_model  # Optional
